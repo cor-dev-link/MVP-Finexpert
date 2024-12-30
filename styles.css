@@ -1,0 +1,634 @@
+/* Variables de color */
+:root {
+    --color-primary: #003366;
+    --color-secondary: #0066cc;
+    --color-accent: #ffd700;
+    --color-background: #ffffff;
+    --color-text: #333333;
+    --color-gray: #f4f4f4;
+    --color-light-blue: #e6f3ff;
+    --color-success: #28a745;
+    --color-warning: #ffc107;
+    --color-danger: #dc3545;
+}
+
+/* Estilos generales */
+body.nokia-inspired {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-background);
+    text-decoration: none;
+}
+
+/* Navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: var(--color-background);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--color-accent);
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info a {
+    color: var(--color-background);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--color-accent);
+}
+
+.phone-link::before {
+    content: '📞';
+    margin-right: 5px;
+}
+
+.login-btn {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background: var(--color-background);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+/* Hero section */
+.hero {
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/30/07/56/money-2696228_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: var(--color-background);
+    padding: 10rem 0 8rem;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 51, 102, 0.7);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #e6c200;
+}
+
+/* Servicios */
+.services {
+    padding: 4rem 0;
+    background-color: var(--color-background);
+}
+
+.services h2 {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    background-color: var(--color-light-blue);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.service-item h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+/* Seguridad */
+.security-features {
+    background-image: url('https://d3t4nwcgmfrp9x.cloudfront.net/upload/informes-financieros-que-indican-el-bienestar-de-una-empresa-643x342.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 4rem 0;
+}
+
+.security-features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(230, 243, 255, 0.9);
+    z-index: 1;
+}
+
+.security-features .container {
+    position: relative;
+    z-index: 2;
+}
+
+.security-features h2 {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+}
+
+.security-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.security-item {
+    background-color: var(--color-background);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.security-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.security-icon {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.trust-badge {
+    text-align: center;
+}
+
+.trust-badge img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+}
+
+/* Tienda */
+.shop-section {
+    padding: 4rem 0;
+    background-color: var(--color-background);
+}
+
+.shop-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.shop-header h2 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: var(--color-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 1.5rem;
+}
+
+.product-category {
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-title {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    color: var(--color-text);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-to-cart-btn, .wishlist-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--color-secondary);
+}
+
+.wishlist-btn {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.wishlist-btn:hover {
+    background-color: var(--color-light-blue);
+}
+
+/* Carrito */
+.cart-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Resumen Financiero */
+.financial-summary {
+    background-color: var(--color-light-blue);
+    padding: 4rem 0;
+}
+
+.financial-summary h2 {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+}
+
+.financial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.financial-item {
+    background-color: var(--color-background);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.financial-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.financial-item h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.financial-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+}
+
+/* Contacto */
+.contact {
+    background-image: url('https://cdn.pixabay.com/photo/2015/01/08/18/27/startup-593341_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 4rem 0;
+    background-color: var(--color-background);
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+.contact .container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact h2 {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#contact-form button {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-media a {
+    color: var(--color-background);
+    margin-left: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--color-accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    nav {
+        width: 100%;
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .contact-info {
+        margin-top: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-media {
+        margin-top: 1rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out;
+}
+
